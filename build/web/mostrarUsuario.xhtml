@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Usuário Cadastrado</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <hl>Usuário cadastrado</hl>
+        <hr/>
+        Nome: <h:outputText value="#{usuarioBean.nome}"/><br/>
+        E-mail:<h:outputLink value="malito#{usuarioBean.email}"><h:outputText value="#{usuarioBean.email}"/></h:outputLink><br/>
+        Senha: <h:outputText value="#{usuarioBean.senha}"/><br/>  
+        Data Nascimento: <h:outputText value="#{usuarioBean.datanascimento}"/><br/>
+        Cnpj: <h:outputText value="#{usuarioBean.cnpj}"/><br/>
+        Cidade: <h:outputText value="#{usuarioBean.cidade}"/><br/>
+                
+        <hr/>
+        <h:form>
+            <h:commandLink action="#{usuarioBean.novo}" value="Inicio"/>
+        </h:form>
+    </h:body>
+</html>
