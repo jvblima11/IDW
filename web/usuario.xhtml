@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Cadastro de Usuário</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <hl> Cadastro Usuário</hl>
+        <hr/>
+        <h:form>
+            <h:messages/>
+            <h:panelGrid columns="2">
+                
+                <h:outputLabel value="Nome:" for ="nome"/>
+                <h:inputText id="nome" label="nome" value="#{usuarioBean.nome}" required="true"/>
+                
+                <h:outputLabel value="e-mail" for ="email"/>
+                <h:inputText id="email" label="e-mail" value="#{usuarioBean.email}"/>
+                
+                <h:outputLabel value="Data de Nascimento:" for="datanascimento"/>
+                <h:inputText id="datanascimento" label="datanascimento" value="#{usuarioBean.datanascimento}"/>
+                
+                <h:outputLabel value="CNPJ:" for="cnpj"/>
+                <h:inputText id="cnpj" label="cnpj" value="#{usuarioBean.cnpj}"/>
+                
+                <h:outputLabel value="Cidade:" for="cidade"/>
+                <h:inputText id="cidade" label="cidade" value="#{usuarioBean.cidade}"/>
+                
+                <h:outputLabel value="Senha" for ="senha"/>
+                <h:inputText id="senha" label="Senha" value="#{usuarioBean.senha}" required="true"/>
+                
+                <h:outputLabel value="Confirmar Senha" for ="confirmarsenha"/>
+                <h:inputText id="confirmarsenha" label="Confirmar Senha"
+                             value="#{usuarioBean.confirmarsenha}" required="true"/>
+                <h:outputText/>
+                <h:commandButton action ="#{usuarioBean.salvar()}" value ="Salvar"/>
+            </h:panelGrid>
+        </h:form>
+        <hr/>
+    </h:body>
+</html>
